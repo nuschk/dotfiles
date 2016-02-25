@@ -7,6 +7,7 @@
 - changed screen resolution
 - settings -> keyboard -> shortcuts -> keyboard -> Move focus to next window -> CMD+<
 - settings -> screensaver -> Message -> Options -> Message: " "
+- settings -> sound -> play feedback if volume is changed
 
 ### applications
 
@@ -17,7 +18,7 @@
 - install oh-my-zsh
 - link config of this repo `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
 - install brew (asked for xcode on the way)
-- `brew install git postgresql postgis mysql node pkg-config graphviz cairo pango gdk-pixbuf libxml2 libxslt libffi gettext`
+- `brew install git postgresql postgis mysql node pkg-config graphviz cairo pango gdk-pixbuf libxml2 libxslt libffi gettext elexir`
 - `brew link gettext --force`
 - run `mysql_secure_installation` and set password to 1234 (no password leads to problems)
 - `npm install -g gulp bower eslint`
@@ -65,6 +66,8 @@ iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
 
 iStat -> Import Settings
 
+Flux -> Disable for VLC...
+
 `./osx.sh`
 
 sublime install packages
@@ -86,6 +89,27 @@ Anaconda User Settings:
 ```
 {
     "pep8_ignore": ["E501", "W292"]
+}
+```
+
+Sublime Key Bindings User
+
+```
+[
+    { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"}
+]
+```
+
+2 Spaces Tab Size for JS and JSX Files, edit `/Users/sspross/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/JavaScript\ \(Babel\).sublime-settings`
+
+```
+{
+    "tab_size": 2,
+    "extensions":
+    [
+        "jsx",
+        "js"
+    ]
 }
 ```
 
