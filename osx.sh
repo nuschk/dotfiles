@@ -538,7 +538,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 1;"name" = "FONTS";}' \
 	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
 	'{"enabled" = 0;"name" = "MESSAGES";}' \
-	'{"enabled" = 0;"name" = "CONTACT";}' \
+	'{"enabled" = 1;"name" = "CONTACT";}' \
 	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
 	'{"enabled" = 0;"name" = "IMAGES";}' \
 	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
@@ -550,7 +550,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
 	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
 	'{"enabled" = 1;"name" = "MENU_CONVERSION";}' \
-	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
+	'{"enabled" = 1;"name" = "MENU_EXPRESSION";}' \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index

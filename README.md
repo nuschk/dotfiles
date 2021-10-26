@@ -3,14 +3,20 @@
 ### setting up a new macbook:
 
 - encrypted disk
-- logged in with apple id (but separated passwords afterwards)
-- changed screen resolution
-- settings -> keyboard -> shortcuts -> keyboard -> Move focus to next window -> CMD+<
-- settings -> screensaver -> Message -> Options -> Message: " "
+- logged in with apple id (but separated password for local user account)
+- settings -> screensaver -> Message -> Options -> Message: "🦊"
+- settings -> hotcorners -> CMD + left-down -> screensaver
+- settings -> security -> activate screensaver immediately
+- settings -> sharing -> change computer name
+- finder -> preferences -> advanced -> show all filename extensions
 - settings -> sound -> play feedback if volume is changed
+
+// - settings -> keyboard -> shortcuts -> keyboard -> Move focus to next window -> CMD+<
 
 ### applications
 
+- install from app store: 1password
+- install dropbox
 - install xcode, clear, evernote, pixelmator, 1password from app store
 - `sudo xcodebuild -license`
 - install chrome (cask version does not work with 1password)
