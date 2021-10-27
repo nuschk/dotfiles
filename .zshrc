@@ -49,7 +49,7 @@ ZSH_THEME="gallois"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew django virtualenvincluded fabric osx pip python sublime)
+plugins=(git brew fabric osx pip python)
 
 # User configuration
 
