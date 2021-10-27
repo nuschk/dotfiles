@@ -57,6 +57,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment

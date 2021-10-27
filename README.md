@@ -15,15 +15,13 @@
 
 ### applications
 
-- install from app store: 1password
-- install dropbox
-- install xcode, clear, evernote, pixelmator, 1password from app store
-- `sudo xcodebuild -license`
-- install chrome (cask version does not work with 1password)
-- install Postgres.app (not with cask, needs to be in Application folder) and Postgres.app with PostGIS 2.1.8 is needed for ff project...
+- install from app store: 1password, xcode, pixelmator
+- install dropbox, rectangle, postgres.app, tableplus
 - install oh-my-zsh
 - link config of this repo `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
 - install brew (asked for xcode on the way)
+
+- `sudo xcodebuild -license`
 - `brew install git postgresql postgis mysql node pkg-config graphviz cairo pango gdk-pixbuf libxml2 libxslt libffi gettext elexir`
 - `brew link gettext --force`
 - run `mysql_secure_installation` and set password to 1234 (no password leads to problems)
