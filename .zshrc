@@ -104,9 +104,6 @@ export PGPASSWORD=''
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# Add ssh key
-# ssh-add -K ~/.ssh/id_rsa
-
 # Init node env
 eval "$(nodenv init -)"
 

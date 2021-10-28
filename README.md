@@ -31,6 +31,12 @@ git config --global user.email "silvan.spross@gmail.com"
 git config --global push.default simple
 ```
 
+#### Add ssh key to keychain (to not always enter passphrase)
+
+```bash
+ssh-add -K ~/.ssh/id_rsa
+```
+
 ### OS X tweaks (from mathiasbynens/dotfiles)
 
 ```bash
