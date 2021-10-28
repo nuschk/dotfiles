@@ -35,18 +35,18 @@
 
 #### iTerm
 
-iTerm -> Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
-iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
+- Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
+- Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
 
 #### zsh
 
 - install oh-my-zsh
-- use dotfile: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
+- link to this repo: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
 - install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
 
 #### VScode
 
-- use dotfile: `ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+- link to this repo: `rm ~/Library/Application\ Support/Code/User/settings.json && ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
 
 #### git
 
