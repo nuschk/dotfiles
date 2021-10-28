@@ -1,9 +1,12 @@
-## dotfiles
+## instructions & dotfiles
 
 ### setting up a new macbook
 
 - encrypted disk
 - logged in with apple id (but separated password for local user account)
+
+#### settings (more in os x tweaks later...)
+
 - settings -> screensaver -> Message -> Options -> Message: "🦊"
 - settings -> hotcorners -> CMD + left-down -> screensaver
 - settings -> hotcorners -> CMD + right-top -> desktop
@@ -12,20 +15,38 @@
 
 ### applications
 
-- install from app store: 1password, xcode, pixelmator
-- install dropbox, rectangle, postgres.app, tableplus, visual studio, istats, google drive, slack
-- install oh-my-zsh
-- link config of this repo `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
-- install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
+#### app store
 
-#### VScode
+- 1password
+- xcode
+- pixelmator
 
-- link user config `ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+#### manual
+
+- install dropbox
+- rectangle
+- postgres.app
+- tableplus
+- visual studio
+- istats
+- google drive
+- slack
+- iTerm
 
 #### iTerm
 
 iTerm -> Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
 iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
+
+#### zsh
+
+- install oh-my-zsh
+- use dotfile: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
+- install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
+
+#### VScode
+
+- use dotfile: `ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
 
 #### git
 
