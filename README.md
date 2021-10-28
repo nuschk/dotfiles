@@ -28,13 +28,14 @@ iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
 ```bash
 git config --global user.name "Silvan Spross"
 git config --global user.email "silvan.spross@gmail.com"
+git config --global pull.rebase false
 git config --global push.default simple
 ```
 
 #### Add ssh key to keychain (to not always enter passphrase)
 
 ```bash
-ssh-add -K ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
 ### OS X tweaks (from mathiasbynens/dotfiles)

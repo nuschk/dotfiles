@@ -90,7 +90,7 @@ export LC_ALL='en_US.UTF-8'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias deletemergedbranches='git branch --merged | grep -v \* | xargs git branch -D && git fetch -p'
-alias ffw='cd ~/projects/flatfox-website/ && source env/bin/activate && cowsay flatfox-website'
+alias ffw='cd ~/projects/flatfox-website/ && source env/bin/activate && cowsay flatfox-website' # arch -x86_64 zsh
 
 # database settings
 export MYSQL_USER=root
