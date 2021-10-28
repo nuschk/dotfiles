@@ -1,123 +1,118 @@
 ## dotfiles
 
-### setting up a new macbook:
+### setting up a new macbook
 
 - encrypted disk
 - logged in with apple id (but separated password for local user account)
 - settings -> screensaver -> Message -> Options -> Message: "🦊"
 - settings -> hotcorners -> CMD + left-down -> screensaver
-- settings -> security -> activate screensaver immediately
+- settings -> hotcorners -> CMD + right-top -> desktop
 - settings -> sharing -> change computer name
-- finder -> preferences -> advanced -> show all filename extensions
-- settings -> sound -> play feedback if volume is changed
-
-// - settings -> keyboard -> shortcuts -> keyboard -> Move focus to next window -> CMD+<
+- settings -> keyboard -> shortcuts -> keyboard -> Move focus to next window -> CMD+<
 
 ### applications
 
 - install from app store: 1password, xcode, pixelmator
-- install dropbox, rectangle, postgres.app, tableplus
+- install dropbox, rectangle, postgres.app, tableplus, visual studio, istats, google drive, slack
 - install oh-my-zsh
 - link config of this repo `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
-- install brew (asked for xcode on the way)
+- install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
 
-- `sudo xcodebuild -license`
-- `brew install git postgresql postgis mysql node pkg-config graphviz cairo pango gdk-pixbuf libxml2 libxslt libffi gettext elexir`
-- `brew link gettext --force`
-- run `mysql_secure_installation` and set password to 1234 (no password leads to problems)
-- `npm install -g gulp bower eslint`
-- `sudo gem install scss_lint`
+#### iTerm
 
-1password -> sync with icloud
-1password -> deactivate 'submit logins'
+iTerm -> Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
+iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
 
-```
+#### git
+
+```bash
 git config --global user.name "Silvan Spross"
 git config --global user.email "silvan.spross@gmail.com"
 git config --global push.default simple
 ```
 
-- generated ssh key https://help.github.com/articles/generating-a-new-ssh-key/
-- added ssh key to agent https://help.github.com/articles/adding-a-new-ssh-key-to-the-ssh-agent/
-- added pub key to github profile
-- tap brew cask `brew cask` and `brew tap caskroom/versions` to get newer version like sublime-text3
+### OS X tweaks (from mathiasbynens/dotfiles)
 
+```bash
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable automatic capitalization as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic period substitution as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Enable full keyboard access for all controls
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
 ```
-brew cask install sublime-text3
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install dropbox
-brew cask install google-drive
-brew cask install transmission
-brew cask install spectacle
-brew cask install postico
-brew cask install slack
-brew cask install bitbar
-brew cask install flux
-brew cask install istat-menus
-brew cask install limechat
-brew cask install recordit
-brew cask install spotify
-brew cask install sonos
-brew cask install teamviewer
-brew cask install the-unarchiver
-brew cask install virtualbox
-brew cask install vlc
-```
-
-iTerm -> Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
-iTerm -> Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
-
-iStat -> Import Settings
-
-Flux -> Disable for VLC...
-
-`./osx.sh`
-
-sublime install packages
-
-- Oceanic Next Color Scheme
-- MarkdownLight
-- Djaneiro
-- GitGutter
-- SideBarEnhancements
-- Anaconda
-- SASS
-- Babel
-- SublimeLinter
-- SublimeLinter-contrib-eslint
-- SublimeLinter-scss-lint
-
-Anaconda User Settings:
-
-```
-{
-    "pep8_ignore": ["E501", "W292"]
-}
-```
-
-Sublime Key Bindings User
-
-```
-[
-    { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"}
-]
-```
-
-2 Spaces Tab Size for JS and JSX Files, edit `/Users/sspross/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/JavaScript\ \(Babel\).sublime-settings`
-
-```
-{
-    "tab_size": 2,
-    "extensions":
-    [
-        "jsx",
-        "js"
-    ]
-}
-```
-
-`ln -s ~/projects/dotfiles/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings`
-
-`brew install python`
-`pip install virtualenv requests`

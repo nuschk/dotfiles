@@ -53,13 +53,20 @@ plugins=(git brew fabric osx pip python)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
+#export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Use correct brew depending on current arch
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/homebrew/bin/brew shellenv)"
+fi
 
 source $ZSH/oh-my-zsh.sh
+
+# Copy from gallois theme with arch in front
+PROMPT='%{$fg[cyan]%}[$(arch)][%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
 
 # You may need to manually set your language environment
 export LANG='en_US.UTF-8'
@@ -82,22 +89,8 @@ export LC_ALL='en_US.UTF-8'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias localhost='python -m SimpleHTTPServer'
-# alias createvirtualenv='function _newvirtualenv(){ virtualenv env --prompt="($1)"; };_newvirtualenv'
 alias deletemergedbranches='git branch --merged | grep -v \* | xargs git branch -D && git fetch -p'
 alias ffw='cd ~/projects/flatfox-website/ && source env/bin/activate && cowsay flatfox-website'
-alias ffc='cd ~/projects/flatfox-crawler/ && cowsay flatfox-crawler'
-
-function unapplieddjangomigrations {
-    if [ -f "manage.py" ]; then
-        ./manage.py showmigrations --list | grep "\[ \]\|^[a-z]" | grep "[ ]" -B 1
-    fi
-}
-
 
 # database settings
 export MYSQL_USER=root
@@ -106,25 +99,7 @@ export PGHOST=localhost
 export PGUSER=sspross
 export PGPASSWORD=''
 
-# The next line updates PATH for the Google Cloud SDK.
-#source '/Users/sspross/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-#source '/Users/sspross/google-cloud-sdk/completion.zsh.inc'
-
-# SSH targets with insta-tmux attach.
-alias stage1="ssh -A www-data@flatfox01.nine.ch -t \"tmux a -t stage1 || tmux new -s stage1\""
-alias stage2="ssh -A www-data@flatfox01.nine.ch -t \"tmux a -t stage2 || tmux new -s stage2\""
-alias stage3="ssh -A www-data@flatfox01.nine.ch -t \"tmux a -t stage3 || tmux new -s stage3\""
-
-# Better default tools
-# alias ping='prettyping'
-# alias cat='bat'
-# alias du="ncdu --color dark -rr -x"
-# alias help='tldr'
-# alias grep='ack'
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -134,12 +109,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Init node env
 eval "$(nodenv init -)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sspross/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sspross/Applications/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/sspross/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sspross/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
