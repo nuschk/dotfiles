@@ -18,6 +18,10 @@
 - link config of this repo `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
 - install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
 
+#### VScode
+
+- link user config `ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+
 #### iTerm
 
 iTerm -> Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
