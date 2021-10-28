@@ -1,0 +1,20 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "workbench.iconTheme": "vs-minimal",
+    "files.insertFinalNewline": true,
+    "window.title": "${activeEditorFull}${separator}${rootName}",
+    "workbench.editor.tabCloseButton": "off",
+    "files.trimTrailingWhitespace": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "python.languageServer": "Pylance",
+    "extensions.ignoreRecommendations": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
+}
