@@ -57,10 +57,13 @@ git config --global pull.rebase false
 git config --global push.default simple
 ```
 
-#### Add ssh key to keychain (to not always enter passphrase)
+#### Activate UseKeychain for ssh key (to not always enter passphrase)
 
-```bash
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+Create `~/.ssh/config` with:
+
+```
+Host *
+    UseKeychain yes
 ```
 
 ### OS X tweaks (from mathiasbynens/dotfiles)
