@@ -102,6 +102,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Init node env
 # eval "$(nodenv init -)"
+export PATH="/opt/homebrew/opt/node@12/bin:$PATH"
 
 # pyenv stuff
 # export PYENV_ROOT="$HOME/.pyenv"

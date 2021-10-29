@@ -42,7 +42,7 @@
 
 - install oh-my-zsh
 - link to this repo: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
-- install brew (asked for xcode on the way): maybe install 2 different brews for each `arch`... (Switch arch `arch -x86_64 zsh` and install brew there)
+- adjust `.zshrc`, install brew etc.
 
 #### VScode
 
