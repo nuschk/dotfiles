@@ -61,9 +61,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 source $ZSH/oh-my-zsh.sh
 
-# Copy from gallois theme with arch in front
-PROMPT='%{$fg[cyan]%}[$(arch)][%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
-
 # You may need to manually set your language environment
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
