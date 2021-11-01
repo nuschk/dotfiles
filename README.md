@@ -35,7 +35,6 @@
 
 #### iTerm
 
-- Preferences -> Profiles -> Default -> Working Directory -> Advanced Configuration -> For new split panes: Reuse previous session's directory
 - Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
 
 #### zsh
@@ -47,6 +46,13 @@
 #### VScode
 
 - link to this repo: `rm ~/Library/Application\ Support/Code/User/settings.json && ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+
+#### Apple Mail
+
+- View -> Organise by Conversation
+- View -> Sort by -> Date and newest message on top
+- Preferences -> Viewing -> Show most recent message at the top
+- Privacy -> Protect Mail Activity (route image loading through apple)
 
 #### git
 
