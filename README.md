@@ -52,7 +52,7 @@
 - View -> Organise by Conversation
 - View -> Sort by -> Date and newest message on top
 - Preferences -> Viewing -> Show most recent message at the top
-- Privacy -> Protect Mail Activity (route image loading through apple)
+- Preferences -> Privacy -> Protect Mail Activity (route image loading through apple)
 
 #### git
 
