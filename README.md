@@ -23,7 +23,7 @@
 
 #### manual
 
-- install dropbox
+- dropbox
 - rectangle
 - postgres.app
 - tableplus
@@ -40,12 +40,12 @@
 #### zsh
 
 - install oh-my-zsh
-- link to this repo: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
+- link config to this repo: `rm ~/.zshrc && ln -s ~/projects/dotfiles/.zshrc ~/.zshrc`
 - adjust `.zshrc`, install brew etc.
 
 #### VScode
 
-- link to this repo: `rm ~/Library/Application\ Support/Code/User/settings.json && ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+- link user config to this repo: `rm ~/Library/Application\ Support/Code/User/settings.json && ln -s ~/projects/dotfiles/settings.json ~/Library/Application\ Support/Code/User/settings.json`
 
 #### Apple Mail
 
