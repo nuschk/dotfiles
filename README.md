@@ -35,7 +35,8 @@
 
 #### iTerm
 
-- Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback
+- ~~Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback~~
+- Preferences -> General -> Preferences -> Load preferences from this repo
 
 #### zsh
 

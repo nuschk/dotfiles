@@ -16,5 +16,6 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
-    }
+    },
+    "workbench.startupEditor": "none"
 }
