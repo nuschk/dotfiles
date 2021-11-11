@@ -2,7 +2,7 @@
 {
     "workbench.iconTheme": "vs-minimal",
     "files.insertFinalNewline": true,
-    "window.title": "${activeEditorFull}${separator}${rootName}",
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.editor.tabCloseButton": "off",
     "files.trimTrailingWhitespace": true,
     "editor.multiCursorModifier": "ctrlCmd",
