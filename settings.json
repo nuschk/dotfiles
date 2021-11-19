@@ -8,7 +8,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "python.languageServer": "Pylance",
     "extensions.ignoreRecommendations": false,
-    "workbench.editor.enablePreview": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -17,5 +16,11 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "telemetry.telemetryLevel": "crash",
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.tree.indent": 16,
+    "workbench.editor.closeEmptyGroups": false,
+    "explorer.confirmDelete": false
 }

@@ -1,0 +1,14 @@
+Host flatfoxapp01
+    HostName flatfoxapp01.nine.ch
+    ForwardAgent yes
+    User www-data
+
+Host flatfoxapp02
+    HostName flatfoxapp02.nine.ch
+    ForwardAgent yes
+    User www-data
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa

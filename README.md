@@ -58,20 +58,16 @@
 #### git
 
 ```bash
-git config --global user.name "Silvan Spross"
-git config --global user.email "silvan.spross@gmail.com"
+git config --global user.name "Bernhard Mäder"
+git config --global user.email "bernhard.maeder@gmail.com"
 git config --global pull.rebase false
 git config --global push.default simple
 ```
 
-#### Activate UseKeychain for ssh key (to not always enter passphrase)
-
-Create `~/.ssh/config` with:
-
-```
-Host *
-    UseKeychain yes
-```
+#### SSH
+- Activate UseKeychain for ssh key (to not always enter passphrase)
+- Provides shortcuts for flatfox app servers
+- link to ssh config file from repo: `ln -s ~/projects/dotfiles/ssh/config ~/.ssh/config`
 
 ### OS X tweaks (from mathiasbynens/dotfiles)
 
