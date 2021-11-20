@@ -35,8 +35,11 @@
 
 #### iTerm
 
-- ~~Preferences -> Profiles -> Default -> Terminal -> Unlimited Scrollback~~
 - Preferences -> General -> Preferences -> Load preferences from this repo
+- Load the profile:
+    - Preferences -> Profiles -> Other Actions... -> Import JSON profile
+    - Remove old default profile and set new one as default.
+    - Will yield the option + cursor word movement, as well as unlimited scrollback.
 
 #### zsh
 
