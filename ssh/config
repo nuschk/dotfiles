@@ -1,14 +1,16 @@
-Host flatfoxapp01
-    HostName flatfoxapp01.nine.ch
-    ForwardAgent yes
-    User www-data
-
-Host flatfoxapp02
-    HostName flatfoxapp02.nine.ch
-    ForwardAgent yes
-    User www-data
+Host github.com
+  # Use Macos keychain for github access, so we don't have to re-type the
+  # passphrase every time we push.
+  UseKeychain yes
 
 Host *
+  IgnoreUnknown UseKeychain,AddKeysToAgent
+
+  # Add keys to ssh-agent automatically
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
+
+  # Do NOT use keychain for other hosts. We DO want to require to type out
+  # the passphrase for all other hosts
+  UseKeychain no
+  IdentityFile ~/.ssh/id_ed25519_2022
+
