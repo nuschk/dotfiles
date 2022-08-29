@@ -1,26 +1,28 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "workbench.iconTheme": "vs-minimal",
-    "files.insertFinalNewline": true,
-    "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "workbench.editor.tabCloseButton": "off",
-    "files.trimTrailingWhitespace": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "python.languageServer": "Pylance",
-    "extensions.ignoreRecommendations": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "workbench.startupEditor": "none",
-    "telemetry.telemetryLevel": "crash",
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.tree.indent": 16,
-    "workbench.editor.closeEmptyGroups": false,
-    "explorer.confirmDelete": false
+  "workbench.iconTheme": "vs-minimal",
+  "files.insertFinalNewline": true,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "workbench.editor.tabCloseButton": "off",
+  "files.trimTrailingWhitespace": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "python.languageServer": "Pylance",
+  "extensions.ignoreRecommendations": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.startupEditor": "none",
+  "telemetry.telemetryLevel": "crash",
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.tree.indent": 16,
+  "workbench.editor.closeEmptyGroups": false,
+  "explorer.confirmDelete": false,
+  // Gitlens shows commit information inline within code. It annoys me.
+  "gitlens.codeLens.enabled": false
 }
