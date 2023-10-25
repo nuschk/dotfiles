@@ -84,7 +84,8 @@ export LC_ALL='en_US.UTF-8'
 # For a full list of active aliases, run `alias`.
 alias deletemergedbranches='git branch --merged | grep -v \* | xargs git branch -D && git fetch -p'
 alias ffw='cd ~/projects/flatfox-website/ && source env/bin/activate && ponysay flatfox-website' # arch -x86_64 zsh
-alias sc='cd ~/projects/serious-chat/ && source env/bin/activate'
+alias ys='cd ~/projects/youspire-app-server/'
+alias gs='cd ~/projects/gospire-app/'
 alias smerge='"/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge"'
 # database settings
 # export MYSQL_USER=root
@@ -108,17 +109,9 @@ export PATH="/opt/homebrew/opt/node@12/bin:$PATH"
 # eval "$(pyenv init --path)"
 # eval "$(pyenv init -)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/bernhardmader/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/bernhardmader/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/bernhardmader/miniconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/bernhardmader/miniconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bernhardmader/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bernhardmader/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bernhardmader/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bernhardmader/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
