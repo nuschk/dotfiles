@@ -83,18 +83,9 @@ export LC_ALL='en_US.UTF-8'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias deletemergedbranches='git branch --merged | grep -v \* | xargs git branch -D && git fetch -p'
-alias ffw='cd ~/projects/flatfox-website/ && source env/bin/activate && ponysay flatfox-website' # arch -x86_64 zsh
 alias ys='cd ~/projects/youspire-app-server/'
 alias gs='cd ~/projects/gospire-app/'
 alias smerge='"/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge"'
-# database settings
-# export MYSQL_USER=root
-# export MYSQL_PASSWORD=1234
-# export PGHOST=localhost
-# export PGUSER=sspross
-# export PGPASSWORD=''
-
-#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -103,15 +94,15 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # eval "$(nodenv init -)"
 export PATH="/opt/homebrew/opt/node@12/bin:$PATH"
 
-# pyenv stuff
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bernhardmader/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bernhardmader/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bernhardmader/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bernhardmader/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Kamal Deploy
+alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock" -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v /var/run/docker.sock:/var/run/docker.sock -v ~/.ssh/known_hosts:/root/.ssh/known_hosts ghcr.io/basecamp/kamal:latest'
+
+# Docker container analyze
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
+
